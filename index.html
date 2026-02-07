@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>World Times News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #0b1c2d;
+  color: white;
+  padding: 15px 0;
+}
+
+.header-container {
+  width: 90%;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+/* NAVBAR */
+nav {
+  background: #102a43;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background: #1c3f5f;
+}
+
+/* BREAKING NEWS */
+.breaking {
+  background: #c62828;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* MAIN LAYOUT */
+.container {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 3;
+}
+
+/* SIDEBAR */
+.sidebar {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+/* ARTICLE */
+.article {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.article h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.article p {
+  color: #555;
+}
+
+/* FEATURED */
+.featured {
+  background: #ffffff;
+  padding: 25px;
+  border-left: 5px solid #0b1c2d;
+  margin-bottom: 25px;
+}
+
+.featured h2 {
+  font-size: 26px;
+}
+
+/* ADS */
+.ad {
+  border: 2px dashed #999;
+  text-align: center;
+  padding: 25px;
+  margin: 20px 0;
+  background: #fafafa;
+  color: #666;
+}
+
+/* SIDEBAR LIST */
+.sidebar h3 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0b1c2d;
+  padding-bottom: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* FOOTER */
+footer {
+  background: #0b1c2d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>🌍 World Times News</h1>
+    <p>Trusted. Accurate. Fast.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <a href="#">Home</a>
+    <a href="#">World</a>
+    <a href="#">Politics</a>
+    <a href="#">Technology</a>
+    <a href="#">Business</a>
+    <a href="#">Sports</a>
+    <a href="#">Education</a>
+  </div>
+</nav>
+
+<div class="breaking">
+  🔴 BREAKING: Major global developments unfolding right now
+</div>
+
+<div class="container">
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+
+    <div class="featured">
+      <h2>AI Revolution Is Reshaping the World</h2>
+      <p>
+        Artificial Intelligence is rapidly transforming industries, education,
+        and daily life across the globe.
+      </p>
+    </div>
+
+    <div class="article">
+      <h2>Global Leaders Meet for Climate Summit</h2>
+      <p>
+        Leaders from different nations gathered today to discuss climate change
+        and future sustainability goals.
+      </p>
+    </div>
+
+    <!-- IN-ARTICLE AD -->
+    <div class="ad">
+      Google AdSense – In Article Ad
+    </div>
+
+    <div class="article">
+      <h2>Technology Trends to Watch in 2026</h2>
+      <p>
+        From AI tools to smart devices, technology continues to evolve at a fast pace.
+      </p>
+    </div>
+
+    <div class="article">
+      <h2>Education Shifts Toward Digital Learning</h2>
+      <p>
+        Schools and universities are increasingly adopting online platforms.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Trending</h3>
+    <ul>
+      <li>Stock Market Update</li>
+      <li>New Smartphone Launch</li>
+      <li>Sports Championship Results</li>
+      <li>Global Economy News</li>
+    </ul>
+
+    <div class="ad">
+      Sidebar Advertisement
+    </div>
+  </aside>
+
+</div>
+
+<footer>
+  <p>© 2026 World Times News | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
