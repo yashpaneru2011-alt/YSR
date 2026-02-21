@@ -1,139 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>World Times News</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google AdSense (WEBSITE ADS ONLY) -->
-<script async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-app-pub-2678799772933573/6994943592"
-  crossorigin="anonymous"></script>
-
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
-  line-height: 1.6;
-}
-header { background: #0b1c2d; color: white; padding: 15px 0; }
-.header-container { width: 90%; margin: auto; }
-header h1 { font-size: 28px; }
-nav { background: #102a43; }
-.nav-container { width: 90%; margin: auto; }
-nav a { display: inline-block; color: white; padding: 12px 15px; text-decoration: none; font-weight: 600; }
-nav a:hover { background: #1c3f5f; }
-.breaking { background: #c62828; color: white; padding: 10px; font-weight: bold; }
-.container { width: 90%; margin: 20px auto; display: flex; gap: 20px; }
-.main-content { flex: 3; }
-.sidebar { flex: 1; background: white; padding: 15px; border: 1px solid #ddd; }
-.article { background: white; padding: 20px; margin-bottom: 20px; border: 1px solid #ddd; }
-.article h2 { font-size: 22px; margin-bottom: 10px; }
-.article p { color: #555; }
-.featured { background: #ffffff; padding: 25px; border-left: 5px solid #0b1c2d; margin-bottom: 25px; }
-.featured h2 { font-size: 26px; }
-.ad { text-align: center; padding: 20px; margin: 20px 0; background: #fafafa; }
-.sidebar h3 { margin-bottom: 10px; border-bottom: 2px solid #0b1c2d; padding-bottom: 5px; }
-.sidebar ul { list-style: none; }
-.sidebar li { padding: 8px 0; border-bottom: 1px solid #eee; }
-footer { background: #0b1c2d; color: white; text-align: center; padding: 15px; margin-top: 30px; }
-</style>
+  <title>QR Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
+<body style="text-align:center; margin-top:50px; font-family:Arial;">
 
-<body>
+<h2>QR Code Generator</h2>
 
-<header>
-  <div class="header-container">
-    <h1>🌍 World Times News</h1>
-    <p>Trusted. Accurate. Fast.</p>
-  </div>
-</header>
+<input type="text" id="text" placeholder="Enter text or URL" style="padding:10px;">
+<button onclick="generateQR()" style="padding:10px;">Generate</button>
 
-<nav>
-  <div class="nav-container">
-    <a href="#">Home</a>
-    <a href="#">World</a>
-    <a href="#">Politics</a>
-    <a href="#">Technology</a>
-    <a href="#">Business</a>
-    <a href="#">Sports</a>
-    <a href="#">Education</a>
-  </div>
-</nav>
+<div id="qrcode" style="margin-top:20px;"></div>
 
-<div class="breaking">
-  🔴 BREAKING: Major global developments unfolding right now
-</div>
-
-<div class="container">
-
-  <div class="main-content">
-
-    <div class="featured">
-      <h2>AI Revolution Is Reshaping the World</h2>
-      <p>Artificial Intelligence is rapidly transforming industries, education, and daily life across the globe.</p>
-    </div>
-
-    <div class="article">
-      <h2>Global Leaders Meet for Climate Summit</h2>
-      <p>Leaders from different nations gathered today to discuss climate change and future sustainability goals.</p>
-    </div>
-
-    <!-- In-article Ad -->
-    <div class="ad">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-app-pub-2678799772933573/6994943592"
-           data-ad-slot="ca-app-pub-2678799772933573/1608455785"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-
-    <div class="article">
-      <h2>Technology Trends to Watch in 2026</h2>
-      <p>From AI tools to smart devices, technology continues to evolve at a fast pace.</p>
-    </div>
-
-    <div class="article">
-      <h2>Education Shifts Toward Digital Learning</h2>
-      <p>Schools and universities are increasingly adopting online platforms.</p>
-    </div>
-
-  </div>
-
-  <aside class="sidebar">
-    <h3>Trending</h3>
-    <ul>
-      <li>Stock Market Update</li>
-      <li>New Smartphone Launch</li>
-      <li>Sports Championship Results</li>
-      <li>Global Economy News</li>
-    </ul>
-
-    <!-- Sidebar Ad -->
-    <div class="ad">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-app-pub-2678799772933573/1699228772"
-           data-ad-slot="ca-app-pub-2678799772933573/3562130893"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div>
-  </aside>
-
-</div>
-
-<footer>
-  <p>© 2026 World Times News | All Rights Reserved</p>
-</footer>
+<script>
+function generateQR() {
+  document.getElementById("qrcode").innerHTML = "";
+  var text = document.getElementById("text").value;
+  new QRCode(document.getElementById("qrcode"), text);
+}
+</script>
 
 </body>
 </html>
